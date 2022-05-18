@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:job_finder/screens/main_screen.dart';
 
 class SplashScreen extends StatelessWidget {
   const SplashScreen({Key? key}) : super(key: key);
@@ -20,7 +21,9 @@ class SplashScreen extends StatelessWidget {
               ],
             ),
             MaterialButton(
-              onPressed: (){},
+              onPressed: (){
+                Navigator.push(context, MaterialPageRoute(builder: (context) => MainScreen()));
+              },
               elevation: 10,
               minWidth: 170,
               height: 50,

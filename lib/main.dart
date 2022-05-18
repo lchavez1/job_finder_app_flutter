@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:job_finder/screens/main_screen.dart';
 import 'package:job_finder/screens/splash_screen.dart';
 
 void main() {
@@ -53,7 +52,7 @@ class MyApp extends StatelessWidget{
           ),
         ),
       ),
-      home: MainScreen(),
+      home: SplashScreen(),
     );
   }
 
