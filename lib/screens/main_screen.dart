@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:job_finder/components//app_bar.dart';
 import 'package:job_finder/components//job_carrusel.dart';
+import 'package:job_finder/components/job_list.dart';
 
 import '../models/company.dart';
 import '../models/job.dart';
@@ -32,6 +33,36 @@ class MainScreen extends StatelessWidget{
         'https://www.frikko.com/wp-content/uploads/2019/03/amazon-logo-icon-png_44637.png',
         'Amazon'
   ),
+    ),
+  ];
+
+  List<Job> recent_jobs = [
+    Job(
+      'Mountain View, CA',
+      'UX Enginner',
+      Company(
+        'https://i.pinimg.com/originals/1c/aa/03/1caa032c47f63d50902b9d34492e1303.jpg',
+        'Apple',
+      ),
+      isFavorite: true,
+    ),
+    Job(
+      'New York, NY',
+      'Motion Designer',
+      Company(
+        'https://menorcaaldia.com/wp-content/uploads/2018/02/air.jpg',
+        'AirBnb',
+      ),
+      isFavorite: true,
+    ),
+    Job(
+      'New York, NY',
+      'Python Developer',
+      Company(
+        'https://www.frikko.com/wp-content/uploads/2019/03/amazon-logo-icon-png_44637.png',
+        'Amazon',
+      ),
+      isFavorite: true,
     ),
   ];
 
@@ -91,9 +122,13 @@ class MainScreen extends StatelessWidget{
                     ],
                   ),
                 ),
-
+                Padding(
+                  padding: EdgeInsets.symmetric(horizontal: 20),
+                  child: JobList(recent_jobs),
+                ),
               ],
             ),
+            SizedBox(height: 50),
           ],
         )
       ),
